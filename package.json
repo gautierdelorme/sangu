@@ -1,8 +1,8 @@
 {
   "name": "sangu",
   "private": true,
-  "version": "0.0.0",
-  "description": "a Sails application",
+  "version": "0.0.1",
+  "description": "a demo web app using Sails and Angular Material",
   "keywords": [],
   "dependencies": {
     "ejs": "~0.8.4",
@@ -30,8 +30,8 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/gautier/sangu.git"
+    "url": "git://github.com/gautierdelorme/sangu.git"
   },
-  "author": "gautier",
-  "license": ""
+  "author": "gautierdelorme",
+  "license": "MIT"
 }
