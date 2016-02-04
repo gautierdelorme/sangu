@@ -5,9 +5,11 @@
 Best practices and project organization has been in part inspired by [Minko Gechev's work](https://github.com/mgechev/angularjs-style-guide). I encourage you to read it.
 
 ### Test the app
+Be sure to have NodeJS (v4.2 and above) and Sails.js (v0.11 and above) both installed on your computer.
 
 - Clone the repo on your computer or download it as zip.
 - Open your terminal and go to the project directory.
+- Run `npm install`
 - Run `sails lift`.
 - Go to `http://localhost:1337` from your favorite web browser.
 
