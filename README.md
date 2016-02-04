@@ -76,7 +76,7 @@ var app = angular.module('sangu', ['ngMaterial']);
 
 
 Element | Naming style | Example | File | Location
-----|------|----|--------
+----|------|----|--------|--------
 Modules | lowerCamelCase  | angularApp | angularApp.js | `assets/js/app/`
 Controllers | Functionality + 'Ctrl'  | AdminCtrl | AdminCtrl.js | `assets/js/app/controllers/`
 Directives | lowerCamelCase  | userInfo | userInfo.js | `assets/js/app/directives/`
