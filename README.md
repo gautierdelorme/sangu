@@ -38,7 +38,7 @@ Be sure to have NodeJS (v4.2 and above) and Sails.js (v0.11 and above) both inst
 
 You can replace in the guide the name _sangu_ by anything you want.
 
-#### Create new Sails app
+#### Create a new Sails app
 
 `sails new sangu && cd sangu`
 
@@ -117,7 +117,7 @@ The structure should look like this :
 var app = angular.module('sangu', ['ngMaterial']);
 ```
 
-- Open the `views/layout.ejs` file and add these attributs to the body tag : `<body ng-app="sangu" ng-cloak>`
+- Open the `views/layout.ejs` file and add these attributes to the body tag : `<body ng-app="sangu" ng-cloak>`
 - Create a file named **main.css** in `assets/styles/` and add the following code snippet in order to wait for Angular's loading before showing the view :
 
 ```css
@@ -201,7 +201,7 @@ function MailCtrl() {
   </md-content>
 </div>
 ```
-- Link components to Angular's controllers with the `ng-controller` attribut.
+- Link components to Angular's controllers with the `ng-controller` attribute.
 - Example (`views/components/hello.ejs`):
 
 ```html
