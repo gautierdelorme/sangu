@@ -4,7 +4,24 @@
 
 Best practices and project organization has been in part inspired by [Minko Gechev's work](https://github.com/mgechev/angularjs-style-guide). I encourage you to read it.
 
-### Test the app
+## Table of contents
+- [sangu](#sangu)
+	- [Test the app](#test-the-app)
+	- [Guide to build an app with Sails and Angular](#guide-to-build-an-app-with-sails-and-angular)
+		- [I - Angular integration in a new Sails project](#i-angular-integration-in-a-new-sails-project)
+			- [I.1 - Create new Sails app](#i1-create-new-sails-app)
+			- [I.2 - Link Angular Material's files to your main layout file](#i2-link-angular-materials-files-to-your-main-layout-file)
+			- [I.3 - Create Angular's directories](#i3-create-angulars-directories)
+			- [I.4 - Create the Angular app](#i4-create-the-angular-app)
+			- [I.5 - Naming and location conventions](#i5-naming-and-location-conventions)
+			- [I.6 - Controllers structure](#i6-controllers-structure)
+			- [I.7 - Views management](#i7-views-management)
+			- [I.8 - Run your app and enjoy :-)](#i8-run-your-app-and-enjoy-)
+		- [II - Communication between Angular and Sails](#ii-communication-between-angular-and-sails)
+	- [License](#license)
+
+## Test the app
+
 Be sure to have NodeJS (v4.2 and above) and Sails.js (v0.11 and above) both installed on your computer.
 
 - Clone the repo on your computer or download it as zip.
@@ -16,12 +33,15 @@ Be sure to have NodeJS (v4.2 and above) and Sails.js (v0.11 and above) both inst
 
 ## Guide to build an app with Sails and Angular
 
-You can replace the name _sangu_ by anything you want.
+### I - Angular integration in a new Sails project
 
-#### 1. Create new Sails app
+You can replace in the guide the name _sangu_ by anything you want.
+
+#### I.1 - Create new Sails app
+
 `sails new sangu && cd sangu`
 
-#### 2. Link Angular Material's files to your main layout file
+#### I.2 - Link Angular Material's files to your main layout file
 - The default main layout file is `views/layout.ejs`.
 
 - Add these lines in the `<head>` part juste before the `<!--STYLES-->` tag to load the AngularMaterial CSS file and the MaterialDesignFont CSS file using Google's CDN.
@@ -43,7 +63,7 @@ You can replace the name _sangu_ by anything you want.
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js"></script>
 ```
 
-#### 3. Create Angular's directories
+#### I.3 - Create Angular's directories
 
 - Create a directory named **app** in `assets/js/`.
 - Create a directory named **controllers** in `assets/js/app/`.
@@ -57,8 +77,38 @@ if needed:
 - Create a directory named **directives** in `assets/js/app/`.
 - Create a directory named **filters** in `assets/js/app/`.
 
+The structure should look like this :
 
-#### 4. Create the Angular app
+```
+├── app
+│   ├── app.js
+│   ├── controllers
+│   │   ├── firstModule
+│   │   │   ├── FirstCtrl.js
+│   │   │   └── SecondCtrl.js
+│   │   └── secondModule
+│   │       └── ThirdCtrl.js
+│   ├── directives
+│   │   ├── firstModule
+│   │   │   └── directive1.js
+│   │   └── secondModule
+│   │       ├── directive2.js
+│   │       └── directive3.js
+│   ├── filters
+│   │   ├── firstModule
+│   │   │   ├── filter1.js
+│   │   │   └── filter2.js
+│   │   └── secondModule
+│   │       └── filter3.js
+│   └── services
+│       ├── FirstService.js
+│       ├── SecondService.js
+│       └── models
+│           ├── Model1.js
+│           └── Model2.js
+```
+
+#### I.4 - Create the Angular app
 
 - Create the **app.js** file in `assets/js/app/` and add this line to init the app (and load the Angular Material library) :
 
@@ -68,17 +118,18 @@ var app = angular.module('sangu', ['ngMaterial']);
 
 - Open the `views/layout.ejs` file and add these attributs to the body tag : `<body ng-app="sangu" ng-cloak>`
 - Create a file named **main.css** in `assets/styles/` and add the following code snippet in order to wait for Angular's loading before showing the view :
+
 ```css
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
     display: none !important;
  }
 ```
 
-#### 5. Naming and location conventions
+#### I.5 - Naming and location conventions
 
 
 Element | Naming style | Example | File | Location
-----|------|----|--------|--------
+--------|--------|--------|--------|--------
 Modules | lowerCamelCase  | angularApp | angularApp.js | `assets/js/app/`
 Controllers | Functionality + 'Ctrl'  | AdminCtrl | AdminCtrl.js | `assets/js/app/controllers/`
 Directives | lowerCamelCase  | userInfo | userInfo.js | `assets/js/app/directives/`
@@ -87,14 +138,15 @@ Services | UpperCamelCase | User | User.js | `assets/js/app/services/`
 Views | lowerCamelCase | mail | mail.ejs | `views/components/`
 
 
-#### 6. Controllers structure
+#### I.6 - Controllers structure
 
 - The structure of a controller's file is :
+
 ```javascript
 app.controller('DemoCtrl', DemoCtrl);
 
 function DemoCtrl() {
-  // attributs
+  // attributes
   // ...
   // methods
 }
@@ -131,7 +183,7 @@ function MailCtrl() {
 
 ```
 
-#### 7. Views management
+#### I.7 - Views management
 
 - Explode views as subcomponents and put them in `views/components/`
 - Then you can include components with the `<% include component.ejs %>` ejs's command.
@@ -163,9 +215,14 @@ function MailCtrl() {
 - According to the naming convention if the controller's name is `MailCtrl.js` then the view's name must be `mail.ejs`.
 
 
-#### 8. Run your app and enjoy :-)
+#### I.8 - Run your app and enjoy :-)
+
 `sails lift` and go to `http://localhost:1337` !
 
+
+### II - Communication between Angular and Sails
+
+    Work in progress...
 
 ## License
 
