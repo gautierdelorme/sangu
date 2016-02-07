@@ -1,8 +1,7 @@
-app.controller('MailCtrl', MailCtrl);
-
 function MailCtrl() {
-  this.showTooltip = false
-  this.list = [
+  var vm = this;
+  vm.showTooltip = false
+  vm.list = [
     {
       title: 'Gautier is a wonderful guy',
       sender: 'Laure',
@@ -15,7 +14,7 @@ function MailCtrl() {
     }
   ]
 
-  this.add = function() {
+  vm.add = function() {
     this.list.push({
       title: 'I love you bro !',
       sender: 'Bastien',
@@ -23,3 +22,5 @@ function MailCtrl() {
     })
   }
 }
+
+angular.module('sangu').controller('MailCtrl', MailCtrl);

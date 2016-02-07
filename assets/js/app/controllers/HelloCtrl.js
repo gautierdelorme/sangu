@@ -1,5 +1,6 @@
-app.controller('HelloCtrl', HelloCtrl);
-
-function HelloCtrl($scope) {
-  $scope.name = 'World'
+function HelloCtrl() {
+  var vm = this;
+  vm.name = 'World'
 }
+
+angular.module('sangu').controller('HelloCtrl', HelloCtrl);

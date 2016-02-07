@@ -1,1 +1,1 @@
-var app = angular.module('sangu', ['ngMaterial']);
+angular.module('sangu', ['ngMaterial']);

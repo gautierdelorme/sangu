@@ -216,7 +216,7 @@ function MailCtrl() {
 - According to the naming convention if the controller's name is `MailCtrl.js` then the view's name must be `mail.ejs`.
 
 
-#### Run your app and enjoy :-)
+#### Run your app and enjoy :tada:
 
 `sails lift` and go to `http://localhost:1337` !
 
