@@ -1,5 +1,17 @@
 # sangu
 
+
+**########################################################################################**
+**########################################################################################**
+
+#### [Ultimate AngularJS Component Oriented Design Guide available here !!](http://gautierdelorme.com/2016/04/20/ultimate-angularjs-component-oriented-design-guide.html)
+
+**/!\ This project is no longer maintained. Read the guide and see [this project](https://github.com/ifac2017/webapp) instead.**
+
+**########################################################################################**
+**########################################################################################**
+
+
 **sangu** is a demo web app using [Sails](https://github.com/balderdashy/sails) and [Angular Material](https://github.com/angular/material). The purpose of this project is to understand how Sails and Angular can work together and how to structure the project.
 
 Best practices and project organization has been in part inspired by [Minko Gechev's work](https://github.com/mgechev/angularjs-style-guide). I encourage you to read it.
